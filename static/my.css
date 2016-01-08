@@ -1,3 +1,35 @@
+/* muli-regular - latin */
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../static/fonts/muli-v7-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Muli'),
+       url('../static/fonts/muli-v7-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../static/fonts/muli-v7-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../static/fonts/muli-v7-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../static/fonts/muli-v7-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../static/fonts/muli-v7-latin-regular.svg#Muli') format('svg'); /* Legacy iOS */
+}
+/* muli-italic - latin */
+@font-face {
+  font-family: 'Muli';
+  font-style: italic;
+  font-weight: 400;
+  src: url('../static/fonts/muli-v7-latin-italic.eot'); /* IE9 Compat Modes */
+  src: local('Muli Italic'), local('Muli-Italic'),
+       url('../static/fonts/muli-v7-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../static/fonts/muli-v7-latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../static/fonts/muli-v7-latin-italic.woff') format('woff'), /* Modern Browsers */
+       url('../static/fonts/muli-v7-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../static/fonts/muli-v7-latin-italic.svg#Muli') format('svg'); /* Legacy iOS */
+}
+
+* {
+    font-family: 'Muli', sans-serif;
+    color: rgb(68, 69, 69);
+}
+
 .l-box {
     padding: 0.5em 2em;
 }
@@ -9,22 +41,80 @@
 }
 
 .header {
-    text-align: center;
-    margin-bottom: 3em;
+    margin-top: 3em;
+    padding-top: 2em;
+    border-left: 1px rgb(68, 69, 69) dashed;
+    border-top: 1px rgb(68, 69, 69) dashed;
+    border-right: 1px rgb(68, 69, 69) dashed;
 }
 
-.footer-menu {
-    text-align: center;
-    margin-bottom: 3em;
+body > .centered-row {
+    border-left: 1px rgb(68, 69, 69) dashed;
+    border-right: 1px rgb(68, 69, 69) dashed;
 }
 
-/* Copied from http://purecss.io/buttons/ */
+img.facebook-sample {
+    width: 90%;
+}
+
+.sample-text {
+    width: 90%;
+    text-align: center;
+    font-style: italic;
+    font-size: .8em;
+}
+
+.sample-text i {
+    color: rgb(136, 138, 138);
+}
+
+textarea#text_fb_message {
+    width: 90%;
+}
+
+.footer {
+    display: block;
+    padding-top: 3em;
+    padding-bottom: 1em;
+    margin-bottom: 3em;
+    border-bottom: 1px rgb(68, 69, 69) dashed;
+}
+
+.footer .l-box, .footer .legal-links a, .footer .legal-links a i.fa {
+    color: rgb(200, 200, 200);
+}
+
+.footer .legal-links a:hover {
+    text-decoration: line-through;
+}
+
+.pure-button i.fa {
+    color: white;
+    margin-right: .35em;
+}
+
+h2 i.fa, p i.fa {
+    color: rgb(68, 69, 69);
+}
+
+h2 i.fa {
+    padding-right: .35em;
+}
+
+.pure-form-stacked input[type=text], .pure-form-stacked input[type=password], .pure-form-stacked input[type=email], .pure-form-stacked input[type=url], .pure-form-stacked input[type=date], .pure-form-stacked input[type=month], .pure-form-stacked input[type=time], .pure-form-stacked input[type=datetime], .pure-form-stacked input[type=datetime-local], .pure-form-stacked input[type=week], .pure-form-stacked input[type=number], .pure-form-stacked input[type=search], .pure-form-stacked input[type=tel], .pure-form-stacked input[type=color], .pure-form-stacked input[type=file], .pure-form-stacked select, .pure-form-stacked label, .pure-form-stacked textarea {
+    margin: .65em 0;
+}
+
+.pure-button-primary, .pure-button-selected, a.pure-button-primary, a.pure-button-selected {
+    border-radius: 2em;
+}
+
 .button-success,
 .button-error,
 .button-warning,
 .button-secondary {
     color: white;
-    border-radius: 4px;
+    border-radius: 2em;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 
@@ -47,4 +137,13 @@
 .error-message {
     color: red;
     font-weight: bold;
+}
+
+.legal-links {
+    text-align: right;
+}
+
+.legal-links a {
+    text-decoration: none;
+    padding-left: 2em;
 }

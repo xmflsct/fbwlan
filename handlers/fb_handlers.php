@@ -144,7 +144,7 @@ function handle_fb_callback() {
         } else {
             if (ARRAY_KEY_EXISTS('FB_REREQUEST', $_SESSION) && $_SESSION['FB_REREQUEST']) {
                 Flight::render('denied_fb', array(
-                    'msg' => _('You didn\'t grant us permission to post on Facebook. That\'s ok!'),
+                    'msg' => _('It seems that the check-in process encountered some error. No worries.'),
                 ));
             } else {
                 $_SESSION['FB_REREQUEST'] = True;
@@ -154,7 +154,7 @@ function handle_fb_callback() {
     }
     else {
         Flight::render('denied_fb', array(
-            'msg' => _('It looks like you didn\'t login! That\'s ok!'),
+            'msg' => _('It looks like you didn\'t login successfully!'),
         ));
     }
 }
@@ -256,11 +256,11 @@ function handle_access_code() {
 
     if (empty($code)) {
         Flight::render('denied_code', array(
-            'msg' => _('No access code sent.'),
+            'msg' => _('Did you type anything?'),
         ));
     } else if ($code != ACCESS_CODE) {
         Flight::render('denied_code', array(
-            'msg' => _('Wrong access code.'),
+            'msg' => _('Did you have a typo?'),
         ));
     } else {
         login_success();

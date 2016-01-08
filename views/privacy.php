@@ -23,7 +23,7 @@
                 <p>
                     <?php
                     echo ' ';
-                    echo _('Beyond Facebook, we assign and store a randomly generated WLAN access token for your computer which expires after');
+                    echo _('Beyond Facebook, we assign and store a randomly generated WiFi access token for your device which expires after');
                     echo ' ' . $session_duration . _(' minutes.');
                     echo ' ';
                     echo _('To provide access to the internet, we store the MAC address of your computer and the IP address assigned by us.');
@@ -51,14 +51,6 @@
                     echo _('For more information, please see the <a '
                         . 'href="https://www.facebook.com/policy.php">'
                         . 'Facebook privacy policy</a>.');
-                    ?>
-                </p>
-                <p> <?php
-                    echo ' ';
-                    echo _('Additionally, note that this webserver may '
-                        . 'process and store information provided by your '
-                        . 'browser or computer in accordance with local '
-                        . 'laws.');
                     ?>
                 </p>
                 <?php if (!empty($extended_privacy_url)) {
